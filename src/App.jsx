@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"; 
 import PostCard from "./componets/PostCard";
+import Date from "./componets/DisplayDate";
 import './App.css'
 
 const API_URL = "https://jsonplaceholder.typicode.com/posts"
@@ -20,9 +21,12 @@ function App() {
   }
 
   return (
+    
     <div>
       <h1>Fakebook</h1>
       <p>Welcome to fakebook, the worlds best social media app.</p>
+
+      <Date />
 
       <h2>Recent Posts</h2>
       {
