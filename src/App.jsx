@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"; 
+import { useEffect, useState} from "react"; 
 import PostCard from "./componets/PostCard";
 import './App.css'
 
@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <h1>Fakebook</h1>
-      <p>Welcome to fakebook, the worlds best social media app.</p>
+      <p>Welcome to Fakebook, the worlds best social media app.</p>
 
       <h2>Recent Posts</h2>
       {
