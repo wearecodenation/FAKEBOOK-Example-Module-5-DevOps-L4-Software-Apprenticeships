@@ -8,7 +8,7 @@ function App() {
 
   const [posts, setPosts] = useState([])
 
-  useEffect (() =>{
+  useEffect (() => {
     getPosts()
   },[])
 

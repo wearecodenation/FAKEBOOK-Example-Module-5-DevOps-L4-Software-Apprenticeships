@@ -1,6 +1,21 @@
 import React from "react";
+import { useEffect, useState} from "react"; 
+
+const IMAGE_API_URL = "https://picsum.photos/200"
 
 const PostCard = ({post})=> {
+
+    const [img, setImg] = useState([])
+
+    useEffect (() => {
+        getImage()
+      },[])
+
+    const getImage = async () => {
+        const req = await fetch(`${IMAGE_API_URL}`)
+        const res = await req
+        setImg(res)
+    }
 
     return (
         <div className="post">
@@ -13,6 +28,10 @@ const PostCard = ({post})=> {
 
             <div>
                 <p>{post.body}</p>
+            </div>
+
+            <div>
+                <img src={img.url} alt="post image" />
             </div>
 
         </div>
